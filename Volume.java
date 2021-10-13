@@ -5,14 +5,14 @@ public class Volume {
         Locale.setDefault(Locale.ROOT);
         double R = readNumber("Введите значение R: ");
         double h = readNumber("Введите значение h: ");
-        double V = calc(R, h);
-        answer(V);
+        double V = calculate(R, h);
+        printAnswer(V);
     }
-    private static double calc(double R, double h) {
+    private static double calculate(double R, double h) {
         double V = Math.pow(R, 2) * Math.PI * h;
         return V;
     }
-    private static void answer(double V) {
+    private static void printAnswer(double V) {
         if (V <= 0) {
             System.out.println("Ошибка! ");
         }
